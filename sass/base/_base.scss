@@ -19,6 +19,9 @@ body {
 }
 .section--no-padding-top {
   padding-top: 0;
+  @media screen and(max-width:1199px) {
+    display: none;
+  }
 }
 .secction--other-background {
   background-color: var(--background-gray);

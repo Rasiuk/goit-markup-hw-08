@@ -1,7 +1,12 @@
 .project {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
 .project__name {
   font-weight: 700;
@@ -18,7 +23,19 @@
 }
 
 .project__item {
-  flex-basis: calc((100% - 30px * 2) / 3);
+  width: 450px;
+  height: 404px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @media screen and(min-width:768px) {
+    width: 354px;
+    height: 440px;
+  }
+  @media screen and(min-width:1200px) {
+    width: 370px;
+    height: 404px;
+  }
 }
 
 .project__link {
