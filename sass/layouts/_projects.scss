@@ -1,11 +1,14 @@
 .project {
   display: flex;
-  flex-direction: column;
+  @media screen and(max-width:767px
+) {
+    flex-direction: column;
+  }
 
   @media screen and (min-width: 768px) {
     flex-wrap: wrap;
     gap: 30px;
-    flex-basis: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 60px) / 2);
   }
 }
 .project__name {
@@ -29,6 +32,7 @@
     margin-bottom: 30px;
   }
   @media screen and(min-width:768px) {
+    display: flex;
     width: 354px;
     height: 440px;
   }
@@ -39,7 +43,8 @@
 }
 
 .project__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
@@ -77,6 +82,7 @@
   display: block;
 }
 .project__border {
+  flex-grow: 1;
   padding: 20px 24px;
   background: #ffffff;
   border: 1px solid #eeeeee;

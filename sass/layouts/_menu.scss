@@ -1,5 +1,5 @@
 .menu {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 767px) {
     display: none;
   }
   position: absolute;
@@ -46,6 +46,7 @@
     margin-bottom: 32px;
   }
 }
+
 .mobile-menu__link {
   color: var(--title-text-color);
   font-weight: 500;
@@ -57,6 +58,9 @@
   &:focus {
     color: var(--accent-color);
   }
+}
+.mobile-menu__link--current {
+  color: var(--accent-color);
 }
 .mobile-contacts {
   margin-bottom: 64px;
