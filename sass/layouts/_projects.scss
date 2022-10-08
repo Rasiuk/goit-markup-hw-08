@@ -26,19 +26,13 @@
 }
 
 .project__item {
-  width: 450px;
-  height: 404px;
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
   @media screen and(min-width:768px) {
     display: flex;
-    width: 354px;
-    height: 440px;
+
+    width: calc((100% - 60px) / 2);
   }
   @media screen and(min-width:1200px) {
-    width: 370px;
-    height: 404px;
+    width: calc((100% - 60px) / 3);
   }
 }
 
