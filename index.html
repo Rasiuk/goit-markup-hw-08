@@ -132,7 +132,13 @@
           <ul class="box list">
             <li class="box__item">
               <div class="box__thumb">
-                <img class="box__img" src="./images/desctop-370.webp" alt="набір тексту для пк" />
+                <img
+                  class="box__img"
+                  srcset="./images/desctop-370.webp 370w, ./images/desctop-740.webp 740w"
+                  sizes="(min-width: 1200px) 370px"
+                  src="./images/desctop-370.webp"
+                  alt="набір тексту для пк"
+                />
 
                 <div class="box__container">
                   <p class="box__text">Десктопні додатки</p>
@@ -143,9 +149,10 @@
               <div class="box__thumb">
                 <img
                   class="box__img"
+                  srcset="./images/mobile370.webp 370w, ./images/mobile740.webp 740w"
+                  sizes="(min-width: 1200px) 370px"
                   src="./images/mobile370.webp"
                   alt="дизайн для смартфону"
-                  width="370"
                 />
                 <div class="box__container">
                   <p class="box__text">Мобільні додатки</p>
@@ -156,6 +163,8 @@
               <div class="box__thumb">
                 <img
                   class="box__img"
+                  srcset="./images/design370.webp 370w, ./images/design740.webp 740w"
+                  sizes="(min-width: 1200px) 370px"
                   src="./images/design370.webp"
                   alt="Паліттра на планшеті"
                   width="370"

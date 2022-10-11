@@ -68,6 +68,12 @@ body {
   background-color: var(--background-gray);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -284,6 +290,12 @@ body {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -636,9 +648,13 @@ body {
   margin-right: auto;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 768px) {
   .hero__title {
     width: 360px;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .hero__title {
     font-size: 44px;
     line-height: 1.36;
     width: 696px;
@@ -806,7 +822,15 @@ body {
 }
 
 .header-contacts__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: auto;
   font-weight: 500;
   font-size: 14px;
@@ -846,15 +870,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .header-contacts__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     gap: 10px;
@@ -938,7 +953,7 @@ body {
 }
 
 .cliets__item {
-  width: 210px;
+  width: calc((100% - 30px) / 2);
   height: 92px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1113,7 +1128,6 @@ body {
   width: 100%;
   font-size: 16px;
   line-height: 1.25;
-  margin-right: 12px;
   padding: 15px 16px;
   border: 1px solid var(--logo-color-gray);
   border-radius: 4px;
@@ -1131,6 +1145,7 @@ body {
 @media screen and (min-width: 768px) {
   .footer__input {
     width: 358px;
+    margin-right: 12px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -1371,8 +1386,8 @@ body {
 
 .menu {
   position: absolute;
-  top: -5px;
-  right: 0;
+  top: 10px;
+  right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1393,6 +1408,12 @@ body {
   .menu {
     display: none;
   }
+}
+
+.js-open-menu {
+  position: absolute;
+  top: -5px;
+  right: 0;
 }
 
 .menu-container {

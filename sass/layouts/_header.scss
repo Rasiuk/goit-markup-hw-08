@@ -27,7 +27,9 @@
   }
 }
 .header-contacts__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   margin-left: auto;
   font-weight: 500;
@@ -58,9 +60,6 @@
     margin-bottom: 10px;
   }
   @media screen and (min-width: 1200px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     gap: 10px;

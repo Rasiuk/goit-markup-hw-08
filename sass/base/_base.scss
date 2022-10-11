@@ -40,3 +40,8 @@ body {
 .secction--other-background {
   background-color: var(--background-gray);
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
